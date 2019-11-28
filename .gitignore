@@ -1,2 +1,8 @@
 *.class
 *.log
+
+.idea/
+.bloop/
+.metals/
+target/
+todo
