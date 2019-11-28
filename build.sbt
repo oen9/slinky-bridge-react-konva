@@ -5,6 +5,7 @@ ThisBuild / organizationName := "oen9"
 ThisBuild / organizationHomepage := Some(url("https://github.com/oen9"))
 
 ThisBuild / description := "react-konva bridge for slinky"
+ThisBuild / licenses := List("MIT" -> url("http://opensource.org/licenses/mit"))
 ThisBuild / homepage := Some(url("https://github.com/oen9/slinky-bridge-react-konva"))
 
 ThisBuild / scmInfo := Some(
