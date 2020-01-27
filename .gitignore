@@ -6,3 +6,4 @@
 .metals/
 target/
 todo
+project/metals.sbt

@@ -3,8 +3,10 @@ package com.github.oen9.slinky.bridge.reactkonva
 import slinky.core.ExternalComponent
 import slinky.core.annotations.react
 import scalajs.js
+import slinky.core.ExternalComponentWithRefType
+import com.github.oen9.slinky.bridge.konva.Konva
 
-@react object Rect extends ExternalComponent {
+@react object Rect extends ExternalComponentWithRefType[Operations.RefOperations] {
   case class Props(
     x: Int,
     y: Int,
