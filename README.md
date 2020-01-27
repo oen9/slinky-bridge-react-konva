@@ -10,7 +10,7 @@ react-konva bridge for slinky
 lazy val jsSettings = Seq(
   libraryDependencies ++= Seq(
     "me.shadaj" %%% "slinky-web" % "0.6.3",
-    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.1"
+    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.2"
   ),
   npmDependencies in Compile ++= Seq(
     "react" -> "16.12.0",
@@ -30,7 +30,7 @@ lazy val jsSettings = Seq(
 ## tested with
 
 ```scala
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.31")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.32")
 scalaVersion := "2.12.10
 ```
 
