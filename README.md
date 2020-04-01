@@ -1,6 +1,7 @@
 # slinky-bridge-react-konva
 
 [![Build Status](https://travis-ci.org/oen9/slinky-bridge-react-konva.svg?branch=master)](https://travis-ci.org/oen9/slinky-bridge-react-konva)
+[![CircleCI](https://circleci.com/gh/oen9/slinky-bridge-react-konva.svg?style=svg)](https://circleci.com/gh/oen9/slinky-bridge-react-konva)
 
 react-konva bridge for slinky
 
@@ -9,29 +10,27 @@ react-konva bridge for slinky
 ```scala
 lazy val jsSettings = Seq(
   libraryDependencies ++= Seq(
-    "me.shadaj" %%% "slinky-web" % "0.6.3",
-    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.2"
+    "me.shadaj" %%% "slinky-web" % "0.6.4",
+    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.3"
   ),
   npmDependencies in Compile ++= Seq(
-    "react" -> "16.12.0",
-    "react-dom" -> "16.12.0",
-    "konva" -> "4.0.18",
-    "react-konva" -> "16.10.1-0"
+    "react" -> "16.13.0",
+    "react-dom" -> "16.13.0",
+    "konva" -> "4.1.2",
+    "react-konva" -> "16.12.0-0"
   ),
   scalaJSUseMainModuleInitializer := true,
-  addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full),
-  version.in(webpack) := "4.41.2",
-  webpackBundlingMode := BundlingMode.LibraryAndApplication(),
+  version.in(webpack) := "4.42.1",
+  webpackBundlingMode := BundlingMode.Application,
   webpackBundlingMode.in(fastOptJS) := BundlingMode.LibraryOnly(),
-  scalacOptions += "-P:scalajs:sjsDefinedByDefault"
 )
 ```
 
 ## tested with
 
 ```scala
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.32")
-scalaVersion := "2.12.10
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.0.1")
+scalaVersion := "2.13.1
 ```
 
 ## how to use
