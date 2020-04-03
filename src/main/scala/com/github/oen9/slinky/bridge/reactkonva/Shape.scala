@@ -1,13 +1,13 @@
 package com.github.oen9.slinky.bridge.reactkonva
 
 import scalajs.js
-import scala.scalajs.js.|
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
+import com.github.oen9.slinky.bridge.reactkonva.ReactKonvaDOM.Context
+import com.github.oen9.slinky.bridge.reactkonva.ReactKonvaDOM.ContextShape
 
-@react object Rect extends ExternalComponentWithRefType[Operations.Ref] {
+@react object Shape extends ExternalComponentWithRefType[Operations.Ref] {
   case class Props(
-    cornerRadius: js.UndefOr[Int | List[Int]] = js.undefined,
     fill: js.UndefOr[String] = js.undefined,
     height: js.UndefOr[Int] = js.undefined,
     shadowBlur: js.UndefOr[Int] = js.undefined,
@@ -21,10 +21,12 @@ import slinky.core.ExternalComponentWithRefType
     x: js.UndefOr[Int] = js.undefined,
     y: js.UndefOr[Int] = js.undefined,
 
+    sceneFunc: js.UndefOr[(Context, ContextShape) => Unit] = js.undefined,
+
     _useStrictMode: js.UndefOr[Boolean] = js.undefined,
     draggable: js.UndefOr[Boolean] = js.undefined,
     onClick: js.UndefOr[() => Unit] = js.undefined,
     onDragEnd: js.UndefOr[() => Unit] = js.undefined
   )
-  override val component = ReactKonvaDOM.Rect
+  override val component = ReactKonvaDOM.Shape
 }

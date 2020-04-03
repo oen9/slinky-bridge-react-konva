@@ -1,15 +1,19 @@
 package com.github.oen9.slinky.bridge.reactkonva
 
 import scalajs.js
-import scala.scalajs.js.|
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
+import org.scalajs.dom.raw.HTMLImageElement
 
-@react object Rect extends ExternalComponentWithRefType[Operations.Ref] {
+@react object Sprite extends ExternalComponentWithRefType[Operations.SpriteRef] {
   case class Props(
-    cornerRadius: js.UndefOr[Int | List[Int]] = js.undefined,
+    animation: js.UndefOr[String] = js.undefined,
+    animations: js.UndefOr[js.Object] = js.undefined,
     fill: js.UndefOr[String] = js.undefined,
+    frameIndex: js.UndefOr[Int] = js.undefined,
+    frameRate: js.UndefOr[Int] = js.undefined,
     height: js.UndefOr[Int] = js.undefined,
+    image: js.UndefOr[HTMLImageElement] = js.undefined,
     shadowBlur: js.UndefOr[Int] = js.undefined,
     shadowColor: js.UndefOr[String] = js.undefined,
     shadowOffsetX: js.UndefOr[Int] = js.undefined,
@@ -26,5 +30,5 @@ import slinky.core.ExternalComponentWithRefType
     onClick: js.UndefOr[() => Unit] = js.undefined,
     onDragEnd: js.UndefOr[() => Unit] = js.undefined
   )
-  override val component = ReactKonvaDOM.Rect
+  override val component = ReactKonvaDOM.Sprite
 }

@@ -1,15 +1,16 @@
 package com.github.oen9.slinky.bridge.reactkonva
 
 import scalajs.js
-import scala.scalajs.js.|
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
 
-@react object Rect extends ExternalComponentWithRefType[Operations.Ref] {
+@react object Star extends ExternalComponentWithRefType[Operations.Ref] {
   case class Props(
-    cornerRadius: js.UndefOr[Int | List[Int]] = js.undefined,
     fill: js.UndefOr[String] = js.undefined,
     height: js.UndefOr[Int] = js.undefined,
+    innerRadius: js.UndefOr[Int] = js.undefined,
+    numPoints: js.UndefOr[Int] = js.undefined,
+    outerRadius: js.UndefOr[Int] = js.undefined,
     shadowBlur: js.UndefOr[Int] = js.undefined,
     shadowColor: js.UndefOr[String] = js.undefined,
     shadowOffsetX: js.UndefOr[Int] = js.undefined,
@@ -24,7 +25,7 @@ import slinky.core.ExternalComponentWithRefType
     _useStrictMode: js.UndefOr[Boolean] = js.undefined,
     draggable: js.UndefOr[Boolean] = js.undefined,
     onClick: js.UndefOr[() => Unit] = js.undefined,
-    onDragEnd: js.UndefOr[() => Unit] = js.undefined
+    onDragEnd: js.UndefOr[() => Unit] = js.undefined,
   )
-  override val component = ReactKonvaDOM.Rect
+  override val component = ReactKonvaDOM.Star
 }

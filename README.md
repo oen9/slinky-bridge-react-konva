@@ -11,12 +11,12 @@ react-konva bridge for slinky
 lazy val jsSettings = Seq(
   libraryDependencies ++= Seq(
     "me.shadaj" %%% "slinky-web" % "0.6.4",
-    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.3"
+    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.4"
   ),
   npmDependencies in Compile ++= Seq(
     "react" -> "16.13.0",
     "react-dom" -> "16.13.0",
-    "konva" -> "4.1.2",
+    "konva" -> "4.2.2",
     "react-konva" -> "16.12.0-0"
   ),
   scalaJSUseMainModuleInitializer := true,
@@ -41,9 +41,9 @@ import com.github.oen9.slinky.bridge.reactkonva._
 div(className := "card-body",
   Stage(800, 600)(
     Layer(
-      Text("Hello world!"),
-      Text("try drag and drop --> ", x = 50, y = 260, fontSize = 18),
-      Circle(290, 290, radius = 50, stroke = "blue", strokeWidth = 5, draggable = true)
+      Text(text = "Hello world!"),
+      Text(text = "try drag and drop --> ", x = 50, y = 260, fontSize = 18),
+      Circle(x = 290, y = 290, radius = 50, stroke = "blue", strokeWidth = 5, draggable = true)
     )
   )
 )

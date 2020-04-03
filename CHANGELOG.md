@@ -4,6 +4,25 @@
 
 ### Added
 
+## [0.0.4] - 2020-04-3
+
+### Added
+
+- Arc
+- Arrow
+- Image
+- Label
+- Path
+- RegularPolygon
+- Ring
+- Shape
+- Sprite
+- Star
+- Tag
+- TextPath
+- use-image (useImage hook)  integration
+- few fields to existing shapes
+
 ## [0.0.3] - 2020-04-1
 
 ### Added

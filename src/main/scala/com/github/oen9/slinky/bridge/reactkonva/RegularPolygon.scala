@@ -1,20 +1,20 @@
 package com.github.oen9.slinky.bridge.reactkonva
 
 import scalajs.js
-import scala.scalajs.js.|
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
 
-@react object Rect extends ExternalComponentWithRefType[Operations.Ref] {
+@react object RegularPolygon extends ExternalComponentWithRefType[Operations.Ref] {
   case class Props(
-    cornerRadius: js.UndefOr[Int | List[Int]] = js.undefined,
     fill: js.UndefOr[String] = js.undefined,
     height: js.UndefOr[Int] = js.undefined,
+    radius: js.UndefOr[Int] = js.undefined,
     shadowBlur: js.UndefOr[Int] = js.undefined,
     shadowColor: js.UndefOr[String] = js.undefined,
     shadowOffsetX: js.UndefOr[Int] = js.undefined,
     shadowOffsetY: js.UndefOr[Int] = js.undefined,
     shadowOpacity: js.UndefOr[Double] = js.undefined,
+    sides: js.UndefOr[Int] = js.undefined,
     stroke: js.UndefOr[String] = js.undefined,
     strokeWidth: js.UndefOr[Int] = js.undefined,
     width: js.UndefOr[Int] = js.undefined,
@@ -26,5 +26,5 @@ import slinky.core.ExternalComponentWithRefType
     onClick: js.UndefOr[() => Unit] = js.undefined,
     onDragEnd: js.UndefOr[() => Unit] = js.undefined
   )
-  override val component = ReactKonvaDOM.Rect
+  override val component = ReactKonvaDOM.RegularPolygon
 }

@@ -36,6 +36,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "slinky-bridge-react-konva",
     libraryDependencies += "me.shadaj" %%% "slinky-core" % "0.6.4",
+    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "1.0.0",
     credentials += Credentials(Path.userHome / ".sbt" / "sonatype_credential"),
     scalacOptions ++= Seq(
       "-Xlint",
