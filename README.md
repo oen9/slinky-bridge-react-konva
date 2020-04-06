@@ -5,13 +5,21 @@
 
 react-konva bridge for slinky
 
+This bridge is developed for my own purpose.
+There is a lot of missing but I'm doing my best.
+If you need something special contact me.
+
+## Showcase / demo
+
+See the showcase here: [react-konva-showcase](https://github.com/oen9/react-konva-showcase) (live app on heroku)
+
 ## chunk of example `build.sbt`
 
 ```scala
 lazy val jsSettings = Seq(
   libraryDependencies ++= Seq(
     "me.shadaj" %%% "slinky-web" % "0.6.4",
-    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.4"
+    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.5"
   ),
   npmDependencies in Compile ++= Seq(
     "react" -> "16.13.0",
