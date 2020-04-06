@@ -4,6 +4,15 @@
 
 ### Added
 
+## [0.0.5] - 2020-04-6
+
+### Added
+
+- Konva.Animation
+- Group
+- `rotation` to Operations.Ref
+- few other fields to existing shapes
+
 ## [0.0.4] - 2020-04-3
 
 ### Added

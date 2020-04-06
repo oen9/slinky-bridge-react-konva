@@ -19,6 +19,7 @@ import scalajs.js
     shadowOffsetY: js.UndefOr[Int] = js.undefined,
     shadowOpacity: js.UndefOr[Double] = js.undefined,
     text: js.UndefOr[String] = js.undefined,
+    verticalAlign: js.UndefOr[String] = js.undefined,
     width: js.UndefOr[Int] = js.undefined,
     x: js.UndefOr[Int] = js.undefined,
     y: js.UndefOr[Int] = js.undefined,

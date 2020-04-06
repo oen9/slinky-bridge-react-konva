@@ -10,6 +10,8 @@ object Operations {
     def move(p: Point): Unit
     def width(): Int
     def height(): Int
+    def rotation(): Int
+    def rotation(angle: Int): Unit
   }
 
   @js.native

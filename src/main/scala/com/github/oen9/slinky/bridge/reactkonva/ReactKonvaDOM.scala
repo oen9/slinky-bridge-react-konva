@@ -26,6 +26,7 @@ object ReactKonvaDOM extends js.Object {
   val Arrow: js.Object = js.native
   val Shape: js.Object = js.native
   val Sprite: js.Object = js.native
+  val Group: js.Object = js.native
 
   @js.native
   trait Context extends js.Any {

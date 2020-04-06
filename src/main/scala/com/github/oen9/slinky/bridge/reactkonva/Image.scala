@@ -9,6 +9,8 @@ import slinky.core.ExternalComponentWithRefType
   case class Props(
     height: js.UndefOr[Int] = js.undefined,
     image: js.UndefOr[HTMLImageElement] = js.undefined,
+    offsetX: js.UndefOr[Int] = js.undefined,
+    offsetY: js.UndefOr[Int] = js.undefined,
     scaleX: js.UndefOr[Double] = js.undefined,
     scaleY: js.UndefOr[Double] = js.undefined,
     width: js.UndefOr[Int] = js.undefined,
@@ -18,6 +20,7 @@ import slinky.core.ExternalComponentWithRefType
     _useStrictMode: js.UndefOr[Boolean] = js.undefined,
     draggable: js.UndefOr[Boolean] = js.undefined,
     onClick: js.UndefOr[() => Unit] = js.undefined,
+    onTap: js.UndefOr[() => Unit] = js.undefined,
     onDragEnd: js.UndefOr[() => Unit] = js.undefined
   )
   override val component = ReactKonvaDOM.Image

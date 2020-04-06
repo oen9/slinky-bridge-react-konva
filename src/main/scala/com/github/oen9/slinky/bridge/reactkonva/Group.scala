@@ -1,23 +1,15 @@
 package com.github.oen9.slinky.bridge.reactkonva
 
-import org.scalajs.dom.raw.HTMLImageElement
 import scalajs.js
+import scala.scalajs.js.|
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
 
-@react object Sprite extends ExternalComponentWithRefType[Operations.SpriteRef] {
+@react object Group extends ExternalComponentWithRefType[Operations.Ref] {
   case class Props(
-    animation: js.UndefOr[String] = js.undefined,
-    animations: js.UndefOr[js.Object] = js.undefined,
+    cornerRadius: js.UndefOr[Int | List[Int]] = js.undefined,
     fill: js.UndefOr[String] = js.undefined,
-    frameIndex: js.UndefOr[Int] = js.undefined,
-    frameRate: js.UndefOr[Int] = js.undefined,
     height: js.UndefOr[Int] = js.undefined,
-    image: js.UndefOr[HTMLImageElement] = js.undefined,
-    offsetX: js.UndefOr[Int] = js.undefined,
-    offsetY: js.UndefOr[Int] = js.undefined,
-    scaleX: js.UndefOr[Double] = js.undefined,
-    scaleY: js.UndefOr[Double] = js.undefined,
     shadowBlur: js.UndefOr[Int] = js.undefined,
     shadowColor: js.UndefOr[String] = js.undefined,
     shadowOffsetX: js.UndefOr[Int] = js.undefined,
@@ -34,5 +26,5 @@ import slinky.core.ExternalComponentWithRefType
     onClick: js.UndefOr[() => Unit] = js.undefined,
     onDragEnd: js.UndefOr[() => Unit] = js.undefined
   )
-  override val component = ReactKonvaDOM.Sprite
+  override val component = ReactKonvaDOM.Group
 }
