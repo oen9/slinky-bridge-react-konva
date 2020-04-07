@@ -6,17 +6,8 @@ import scalajs.js
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
 
-@react object Group extends ExternalComponentWithRefType[Operations.NodeRef] {
+@react object Node extends ExternalComponentWithRefType[Operations.NodeRef] {
   case class Props(
-    // Container
-    clearBeforeDraw: js.UndefOr[Boolean] = js.undefined,
-    clipFunc: js.UndefOr[js.Dynamic => Unit] = js.undefined,
-    clipX: js.UndefOr[Double] = js.undefined,
-    clipY: js.UndefOr[Double] = js.undefined,
-    clipWidth: js.UndefOr[Double] = js.undefined,
-    clipHeight: js.UndefOr[Double] = js.undefined,
-
-    // Node
     x: js.UndefOr[Double] = js.undefined,
     y: js.UndefOr[Double] = js.undefined,
     width: js.UndefOr[Double] = js.undefined,
@@ -40,5 +31,5 @@ import slinky.core.ExternalComponentWithRefType
     onDragEnd: js.UndefOr[() => Unit] = js.undefined,
     onTap: js.UndefOr[() => Unit] = js.undefined,
   )
-  override val component = ReactKonvaDOM.Group
+  override val component = ReactKonvaDOM.Rect
 }

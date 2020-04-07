@@ -6,7 +6,7 @@ import scalajs.js
 import slinky.core.annotations.react
 import slinky.core.ExternalComponentWithRefType
 
-@react object Group extends ExternalComponentWithRefType[Operations.NodeRef] {
+@react object Container extends ExternalComponentWithRefType[Operations.NodeRef] {
   case class Props(
     // Container
     clearBeforeDraw: js.UndefOr[Boolean] = js.undefined,
@@ -40,5 +40,5 @@ import slinky.core.ExternalComponentWithRefType
     onDragEnd: js.UndefOr[() => Unit] = js.undefined,
     onTap: js.UndefOr[() => Unit] = js.undefined,
   )
-  override val component = ReactKonvaDOM.Group
+  override val component = ReactKonvaDOM.Container
 }

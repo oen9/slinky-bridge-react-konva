@@ -2,6 +2,7 @@ package com.github.oen9.slinky.bridge.reactkonva
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
+import Operations.ShapeRef
 
 @js.native
 @JSImport("react-konva", JSImport.Default)
@@ -27,6 +28,8 @@ object ReactKonvaDOM extends js.Object {
   val Shape: js.Object = js.native
   val Sprite: js.Object = js.native
   val Group: js.Object = js.native
+  val Node: js.Object = js.native
+  val Container: js.Object = js.native
 
   @js.native
   trait Context extends js.Any {
@@ -35,10 +38,11 @@ object ReactKonvaDOM extends js.Object {
     def lineTo(x: Int, y: Int): Unit
     def quadraticCurveTo(x: Int, y: Int, w: Int, h: Int): Unit
     def closePath(): Unit
-    def fillStrokeShape(cs: ContextShape): Unit
+    def fillStrokeShape(shape: ShapeRef): Unit
   }
 
   @js.native
+  @deprecated("moved to Operations.NodeRef", since = "0.0.6")
   trait ContextShape extends js.Any {
     def getAttr(attr: String): js.Any
   }

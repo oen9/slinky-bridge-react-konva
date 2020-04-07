@@ -4,7 +4,7 @@ import slinky.core.ExternalComponentWithRefType
 import slinky.core.annotations.react
 import scalajs.js
 
-@react object Tag extends ExternalComponentWithRefType[Operations.Ref] {
+@react object Tag extends ExternalComponentWithRefType[Operations.ShapeRef] {
   case class Props(
     fill: js.UndefOr[String] = js.undefined,
     lineJoin: js.UndefOr[String] = js.undefined,

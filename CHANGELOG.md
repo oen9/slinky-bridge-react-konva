@@ -4,6 +4,45 @@
 
 ### Added
 
+## [0.1.0] - 2020-04-7
+
+### Added
+
+- KonvaHelper (for Vector2d, ClientRect)
+- Node
+- Container
+- IRect
+- RGBA
+- all missing params to Arc
+- all missing params to Arrow
+- all missing params to Circle
+- all missing params to Ellipse
+- all missing params to Group
+- all missing params to Image
+- all missing params to Label
+- all missing params to Layer
+- all missing params to Line
+- all missing params to Path
+- all missing params to Rect
+- all missing params to RegularPolygon
+- all missing params to Ring
+- all missing params to Shape
+- all missing params to Sprite
+- all missing params to Stage
+- all missing params to Star
+- all missing params to Text
+- all missing params to TextPath
+- all missing params to Wedge
+
+### Changed
+
+- Point -> Vector2d
+- Ref -> NodeRef
+- Frame -> IFrame
+- ClientRect -> IRect
+- Konva.Util.RGB -> Konva.RGB
+
+
 ## [0.0.5] - 2020-04-6
 
 ### Added

@@ -9,36 +9,49 @@ import scalajs.js.annotation.JSImport
 object Konva extends js.Object {
   @js.native
   object Util extends js.Object {
-    @js.native
-    trait RGB extends js.Object {
-      def r: Int
-      def g: Int
-      def b: Int
-    }
-    @js.native
-    trait ClientRect extends js.Object {
-      def x: Double
-      def y: Double
-      def width: Double
-      def height: Double
-    }
     def getRandomColor(): String = js.native
     def getRGB(color: String): RGB = js.native
-    def haveIntersection(r1: ClientRect, r2: ClientRect): Boolean = js.native
+    def haveIntersection(r1: IRect, r2: IRect): Boolean = js.native
   }
 
   @js.native
-  class Animation(func: js.Function1[Frame, Unit], layers: Seq[Operations.Ref]) extends js.Object {
+  class Animation(func: js.Function1[IFrame, Unit], layers: Seq[Operations.ShapeRef]) extends js.Object {
     def start(): Unit = js.native
     def stop(): Unit = js.native
     def isRunning(): Boolean = js.native
   }
 
   @js.native
-  trait Frame extends js.Object {
+  trait IFrame extends js.Object {
+    def time: Double
     def timeDiff: Double
     def lastTime: Double
-    def time: Double
     def frameRate : Double
+  }
+
+  @js.native
+  trait Vector2d extends js.Object {
+    def x: Double
+    def y: Double
+  }
+
+  @js.native
+  trait IRect extends js.Object {
+    def x: Double
+    def y: Double
+    def width: Double
+    def height: Double
+  }
+
+  @js.native
+  trait RGB extends js.Object {
+    def r: Int
+    def g: Int
+    def b: Int
+  }
+
+  @js.native
+  trait RGBA extends RGB {
+    def a: Int
   }
 }

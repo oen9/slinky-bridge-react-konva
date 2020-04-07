@@ -1,7 +1,48 @@
 package com.github.oen9.slinky.bridge.reactkonva
 
+import com.github.oen9.slinky.bridge.konva.Konva
+import Konva.Vector2d
+import scalajs.js
 import slinky.core.ExternalComponentNoPropsWithRefType
 
-object Layer extends ExternalComponentNoPropsWithRefType[Operations.Ref] {
+object Layer extends ExternalComponentNoPropsWithRefType[Operations.ShapeRef] {
+  case class Props(
+    // Layer
+    // clearBeforeDraw: js.UndefOr[Boolean] = js.undefined, // this is redundant in Konva
+    hitGraphEnabled: js.UndefOr[Boolean] = js.undefined,
+    imageSmoothingEnabled: js.UndefOr[Boolean] = js.undefined,
+
+    // Container
+    clearBeforeDraw: js.UndefOr[Boolean] = js.undefined,
+    clipFunc: js.UndefOr[js.Dynamic => Unit] = js.undefined,
+    clipX: js.UndefOr[Double] = js.undefined,
+    clipY: js.UndefOr[Double] = js.undefined,
+    clipWidth: js.UndefOr[Double] = js.undefined,
+    clipHeight: js.UndefOr[Double] = js.undefined,
+
+    // Node
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    listening: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[String] = js.undefined,
+    name: js.UndefOr[String] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    scale: js.UndefOr[Vector2d] = js.undefined,
+    scaleX: js.UndefOr[Double] = js.undefined,
+    scaleY: js.UndefOr[Double] = js.undefined,
+    rotation: js.UndefOr[Int] = js.undefined,
+    offset: js.UndefOr[Vector2d] = js.undefined,
+    offsetX: js.UndefOr[Int] = js.undefined,
+    offsetY: js.UndefOr[Int] = js.undefined,
+
+    _useStrictMode: js.UndefOr[Boolean] = js.undefined,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    onClick: js.UndefOr[() => Unit] = js.undefined,
+    onDragEnd: js.UndefOr[() => Unit] = js.undefined,
+    onTap: js.UndefOr[() => Unit] = js.undefined,
+  )
   override val component = ReactKonvaDOM.Layer
 }

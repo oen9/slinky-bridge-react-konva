@@ -5,17 +5,22 @@ import com.github.oen9.slinky.bridge.konva.Konva
 
 object Operations {
   @js.native
-  trait Ref extends js.Object {
-    def getClientRect(): Konva.Util.ClientRect
-    def move(p: Point): Unit
+  trait NodeRef extends js.Object {
+    def getClientRect(): Konva.IRect
+    def move(p: Konva.Vector2d): Unit
     def width(): Int
     def height(): Int
     def rotation(): Int
     def rotation(angle: Int): Unit
+    def getAttr(attr: String): js.Any
   }
 
   @js.native
-  trait SpriteRef extends Ref {
+  trait ShapeRef extends NodeRef {
+  }
+
+  @js.native
+  trait SpriteRef extends NodeRef {
     def animation(name: String): Unit
     def frameRate(): Int
     def frameIndex(): Int
@@ -23,17 +28,5 @@ object Operations {
     def on(e: String, f: js.Function0[Unit]): Unit
     def start(): Unit
     def stop(): Unit
-  }
-
-  @js.native
-  trait Point extends js.Object {
-    def x: Int
-    def y: Int
-  }
-  object Point {
-    def apply(x: Int, y: Int) = js.Dynamic.literal(
-      x = x,
-      y = y
-    ).asInstanceOf[Point]
   }
 }
