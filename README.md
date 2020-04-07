@@ -19,7 +19,7 @@ See the showcase here: [react-konva-showcase](https://github.com/oen9/react-konv
 lazy val jsSettings = Seq(
   libraryDependencies ++= Seq(
     "me.shadaj" %%% "slinky-web" % "0.6.4",
-    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.0.5"
+    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.1.0"
   ),
   npmDependencies in Compile ++= Seq(
     "react" -> "16.13.0",
@@ -47,7 +47,7 @@ scalaVersion := "2.13.1
 import com.github.oen9.slinky.bridge.reactkonva._
 
 div(className := "card-body",
-  Stage(800, 600)(
+  Stage(width = 800, height = 600)(
     Layer(
       Text(text = "Hello world!"),
       Text(text = "try drag and drop --> ", x = 50, y = 260, fontSize = 18),
