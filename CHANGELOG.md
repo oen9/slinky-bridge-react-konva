@@ -4,6 +4,21 @@
 
 ### Added
 
+## [0.1.1] - 2020-04-9
+
+### Added
+
+- KonvaEventObject
+- all missing events
+- all missing params to Tag
+
+### Changed
+
+- onClick from () => Unit to KonvaEventObject[MouseEvent] => Unit
+- onDragEng from () => Unit to KonvaEventObject[DragEvent] => Unit
+- onTap from () => Unit to KonvaEventObject[Event] => Unit
+- cornerRadius in Rect from Int to Double
+
 ## [0.1.0] - 2020-04-7
 
 ### Added

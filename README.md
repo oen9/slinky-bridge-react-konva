@@ -19,7 +19,7 @@ See the showcase here: [react-konva-showcase](https://github.com/oen9/react-konv
 lazy val jsSettings = Seq(
   libraryDependencies ++= Seq(
     "me.shadaj" %%% "slinky-web" % "0.6.4",
-    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.1.0"
+    "com.github.oen9" %%% "slinky-bridge-react-konva" % "0.1.1"
   ),
   npmDependencies in Compile ++= Seq(
     "react" -> "16.13.0",
@@ -58,19 +58,21 @@ div(className := "card-body",
 ```
 
 ```scala
+import com.github.oen9.slinky.bridge.konva.Konva
+import com.github.oen9.slinky.bridge.konva.Konva.KonvaEventObject
+import com.github.oen9.slinky.bridge.reactkonva.Rect
+import org.scalajs.dom.raw.MouseEvent
+import slinky.core.annotations.react
+import slinky.core.facade.Hooks._
 import slinky.core.FunctionalComponent
 import slinky.web.html._
-import slinky.core.facade.Hooks._
-import com.github.oen9.slinky.bridge.reactkonva.Rect
-import com.github.oen9.slinky.bridge.konva.Konva
-import slinky.core.annotations.react
 
 @react object ColoredRect {
   type Props = Unit
   val component = FunctionalComponent[Props] { _ =>
     val (color, setColor) = useState("navy")
 
-    def handleClick() = {
+    def handleClick(e: KonvaEventObject[MouseEvent]): Unit = {
       setColor(Konva.Util.getRandomColor())
     }
 

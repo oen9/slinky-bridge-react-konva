@@ -1,6 +1,7 @@
 package com.github.oen9.slinky.bridge.konva
 
-import com.github.oen9.slinky.bridge.reactkonva.Operations
+import com.github.oen9.slinky.bridge.reactkonva.Operations.NodeRef
+import com.github.oen9.slinky.bridge.reactkonva.Operations.ShapeRef
 import scalajs.js
 import scalajs.js.annotation.JSImport
 
@@ -15,7 +16,7 @@ object Konva extends js.Object {
   }
 
   @js.native
-  class Animation(func: js.Function1[IFrame, Unit], layers: Seq[Operations.ShapeRef]) extends js.Object {
+  class Animation(func: js.Function1[IFrame, Unit], layers: Seq[ShapeRef]) extends js.Object {
     def start(): Unit = js.native
     def stop(): Unit = js.native
     def isRunning(): Boolean = js.native
@@ -53,5 +54,14 @@ object Konva extends js.Object {
   @js.native
   trait RGBA extends RGB {
     def a: Int
+  }
+
+  @js.native
+  trait KonvaEventObject[+EventType] extends js.Object {
+    def target: ShapeRef
+    def evt: EventType
+    def currentTarget: NodeRef
+    def cancelBubble: Boolean
+    def child: js.UndefOr[NodeRef]
   }
 }
