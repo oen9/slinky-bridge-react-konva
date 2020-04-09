@@ -9,9 +9,23 @@ This bridge is developed for my own purpose.
 There is a lot of missing but I'm doing my best.
 If you need something special contact me.
 
-## Showcase / demo
+## showcase / demo
 
 See the showcase here: [react-konva-showcase](https://github.com/oen9/react-konva-showcase) (live app on heroku)
+
+## what do we have
+
+### supported
+
+- all tutorial's shapes
+- all events
+- animations
+
+### missing
+
+- filters
+- Transformer
+- probably more (contact me)
 
 ## chunk of example `build.sbt`
 
